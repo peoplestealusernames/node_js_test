@@ -36,8 +36,6 @@ const requestListener = function (req, res)
 
     res.end(fs.readFileSync("website.html"));
 
-    res.on
-
     console.log(req.method)
 };
 
