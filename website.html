@@ -1,0 +1,24 @@
+<html>
+
+<body>
+    <input type="text" id="variableInput" />
+    <button onClick="onSubmit()">Submit</button>
+    <script>
+        function onSubmit()
+        {
+            const inputElement = document.getElementById('variableInput');
+            console.log(JSON.stringify({inputElement: inputElement.value}));
+            fetch("http://localhost:8000/",
+                {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    method: "POST",
+                    body: JSON.stringify({inputElement: inputElement.value})
+                })
+        }
+    </script>
+</body>
+
+</html>
