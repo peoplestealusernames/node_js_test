@@ -8,25 +8,6 @@ const host = Ethernet[Ethernet.length - 1].address
 //const host = 'localhost';
 const port = 8000;
 
-/*const requestListener = function (req, res)
-{
-    res.setHeader("Content-Type", "text/html");
-    res.writeHead(200);
-    res.end(`<html><body><h1>This is HTML</h1></body></html>`);
-};*/
-
-/* const requestListener = function (req, res)
-{
-    res.setHeader("Content-Type", "application/json");
-    res.writeHead(200);
-    var out = "";
-    for (const v in res)
-    {
-        out += (JSON.stringify(v)) + "\n"
-    }
-    res.end(out);
-}; */
-
 const requestListener = function (req, res)
 {
     res.setHeader("Content-Type", "text/html");
