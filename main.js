@@ -1,8 +1,11 @@
 import fs from "fs";
 import http from "http";
+import os from "os"
+const networkInterfaces = os.networkInterfaces();
+const Ethernet = networkInterfaces.Ethernet
+const host = Ethernet[Ethernet.length - 1].address
 
-
-const host = 'localhost';
+//const host = 'localhost';
 const port = 8000;
 
 /*const requestListener = function (req, res)
