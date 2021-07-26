@@ -20,7 +20,7 @@ const requestListener = function (req, res)
 
     res.end(fs.readFileSync("website.html"));
 
-    console.log(req.method)
+    console.log(req.method, req.url)
 };
 
 const server = http.createServer(requestListener);
